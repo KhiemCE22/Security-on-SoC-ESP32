@@ -1,0 +1,7 @@
+[1/4] C:\Windows\system32\cmd.exe /C "cd /D D:\Study\Cryptoloraphy\YOLO_BIT\build\esp-idf\esptool_py && C:\Users\quynh\.espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Users/quynh/esp/v5.1/esp-idf/components/partition_table/check_sizes.py --offset 0x10000 partition --type app D:/Study/Cryptoloraphy/YOLO_BIT/build/partition_table/partition-table.bin D:/Study/Cryptoloraphy/YOLO_BIT/build/YOLO_BIT.bin"
+YOLO_BIT.bin binary size 0xdfff4 bytes. Smallest app partition is 0x100000 bytes. 0x2000c bytes (13%) free.
+[2/4] Performing build step for 'bootloader'
+[1/1] C:\Windows\system32\cmd.exe /C "cd /D D:\Study\Cryptoloraphy\YOLO_BIT\build\bootloader\esp-idf\esptool_py && C:\Users\quynh\.espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Users/quynh/esp/v5.1/esp-idf/components/partition_table/check_sizes.py --offset 0x10000 bootloader 0x1000 D:/Study/Cryptoloraphy/YOLO_BIT/build/bootloader/bootloader.bin"
+Bootloader binary size 0x9ea0 bytes. 0x5160 bytes (34%) free.
+[3/4] No install step for 'bootloader'
+[4/4] Completed 'bootloader'

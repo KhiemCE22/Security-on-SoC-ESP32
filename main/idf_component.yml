@@ -1,0 +1,5 @@
+version: "1.0.0"
+
+dependencies:
+  espressif/arduino-esp32: "^3.0.1"
+  espressif/esp_rainmaker: "*"

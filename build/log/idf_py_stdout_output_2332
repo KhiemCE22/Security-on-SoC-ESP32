@@ -1,0 +1,71 @@
+[1/5] C:\Windows\system32\cmd.exe /C "cd /D D:\Study\Cryptoloraphy\YOLO_BIT\build\esp-idf\esptool_py && C:\Users\quynh\.espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Users/quynh/esp/v5.1/esp-idf/components/partition_table/check_sizes.py --offset 0x10000 partition --type app D:/Study/Cryptoloraphy/YOLO_BIT/build/partition_table/partition-table.bin D:/Study/Cryptoloraphy/YOLO_BIT/build/YOLO_BIT.bin"
+YOLO_BIT.bin binary size 0xdfff4 bytes. Smallest app partition is 0x100000 bytes. 0x2000c bytes (13%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] C:\Windows\system32\cmd.exe /C "cd /D D:\Study\Cryptoloraphy\YOLO_BIT\build\bootloader\esp-idf\esptool_py && C:\Users\quynh\.espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Users/quynh/esp/v5.1/esp-idf/components/partition_table/check_sizes.py --offset 0x10000 bootloader 0x1000 D:/Study/Cryptoloraphy/YOLO_BIT/build/bootloader/bootloader.bin"
+Bootloader binary size 0x9ea0 bytes. 0x5160 bytes (34%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] C:\Windows\system32\cmd.exe /C "cd /D C:\Users\quynh\esp\v5.1\esp-idf\components\esptool_py && C:\Users\quynh\.espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/Users/quynh/esp/v5.1/esp-idf -D SERIAL_TOOL=C:/Users/quynh/.espressif/python_env/idf5.1_py3.11_env/Scripts/python.exe;;C:/Users/quynh/esp/v5.1/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=no_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/Study/Cryptoloraphy/YOLO_BIT/build -P C:/Users/quynh/esp/v5.1/esp-idf/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32 -p COM3 -b 460800 --before=default_reset --after=no_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 4MB 0x20000 YOLO_BIT.bin 0x10000 partition_table/partition-table.bin
+esptool.py v4.10.0
+Serial port COM3
+Connecting.....
+Chip is ESP32-D0WD (revision v1.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 08:f9:e0:ac:41:d4
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00020000 to 0x000fffff...
+Flash will be erased from 0x00010000 to 0x00010fff...
+WARNING: Security features enabled, so not changing any flash settings.
+Compressed 917492 bytes to 558034...
+Writing at 0x00020000... (2 %)
+Writing at 0x0002d62d... (5 %)
+Writing at 0x0003822c... (8 %)
+Writing at 0x000451f8... (11 %)
+Writing at 0x0004b286... (14 %)
+Writing at 0x00050cc9... (17 %)
+Writing at 0x00056907... (20 %)
+Writing at 0x0005c63d... (22 %)
+Writing at 0x000624fc... (25 %)
+Writing at 0x00068185... (28 %)
+Writing at 0x0006dfdb... (31 %)
+Writing at 0x000738c0... (34 %)
+Writing at 0x00078e2a... (37 %)
+Writing at 0x0007e77c... (40 %)
+Writing at 0x00083fb8... (42 %)
+Writing at 0x000898ea... (45 %)
+Writing at 0x0008f0cd... (48 %)
+Writing at 0x00094aa6... (51 %)
+Writing at 0x0009a5a3... (54 %)
+Writing at 0x000a093d... (57 %)
+Writing at 0x000a64e5... (60 %)
+Writing at 0x000abab7... (62 %)
+Writing at 0x000b0f3a... (65 %)
+Writing at 0x000b6b64... (68 %)
+Writing at 0x000bc6c9... (71 %)
+Writing at 0x000c1f3f... (74 %)
+Writing at 0x000c7718... (77 %)
+Writing at 0x000cd669... (80 %)
+Writing at 0x000d32ce... (82 %)
+Writing at 0x000d8b06... (85 %)
+Writing at 0x000e144c... (88 %)
+Writing at 0x000e7298... (91 %)
+Writing at 0x000ed147... (94 %)
+Writing at 0x000f2937... (97 %)
+Writing at 0x000f7fa1... (100 %)
+Wrote 917492 bytes (558034 compressed) at 0x00020000 in 13.0 seconds (effective 565.8 kbit/s)...
+Hash of data verified.
+WARNING: Security features enabled, so not changing any flash settings.
+Compressed 3140 bytes to 174...
+Writing at 0x00010000... (100 %)
+Wrote 3140 bytes (174 compressed) at 0x00010000 in 0.1 seconds (effective 337.1 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Staying in bootloader.
