@@ -1,0 +1,5 @@
+Compiler supported targets: xtensa-esp32-elf
+
+ESP Insights Project commit: eb9acfd-dirty
+ESP RainMaker Project commit: eb9acfd-dirty
+ninja: error: unknown target 'secure-generate-flash-encryption-key'
