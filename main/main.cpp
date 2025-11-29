@@ -1,10 +1,11 @@
 #include <Arduino.h>
+#include "esp_log.h"
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 #include <WiFi.h>
 #include <PubSubClient.h>
 
-// ⚙️ WiFi & MQTT (giữ để sau dùng OTA)
+// WiFi & MQTT
 #define WIFI_SSID       "OPPO Reno4"
 #define WIFI_PASSWORD   "hcmutk22"
 
@@ -12,15 +13,17 @@
 #define MQTT_PORT       1883
 #define MQTT_USER       "iot_device_test"
 #define MQTT_PASSWORD   "123456"
-#define MQTT_CLIENT_ID  "IOT_DEVICE_TEST_OTA"
+#define MQTT_CLIENT_ID  "IOT_DEVICE_TEST_SECURE"
 
-// Nếu sau này cần topic riêng cho OTA thì đổi ở đây
-#define MQTT_TOPIC_PING "v1/devices/me/telemetry"
+// TOPICS
+#define MQTT_TOPIC_PING       "v1/devices/me/telemetry"
 
-// LCD I2C: giữ đúng như code cũ của bạn
+static const char *TAG = "SECURE_APP";
+
+// LCD I2C
 LiquidCrystal_I2C lcd(0x21, 16, 2);
 
-// MQTT client (Arduino-style)
+// MQTT client
 WiFiClient espClient;
 PubSubClient mqttClient(espClient);
 
@@ -28,26 +31,27 @@ PubSubClient mqttClient(espClient);
 // 🔹 WIFI + MQTT
 // ===============================
 void connectWiFi() {
-    Serial.print("🔗 Kết nối WiFi...");
+    ESP_LOGI(TAG, "Connecting to WiFi...");
     WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
     while (WiFi.status() != WL_CONNECTED) {
-        delay(1000);
-        Serial.print(".");
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
+        ESP_LOGI(TAG, ".");
     }
-    Serial.println("\n✅ WiFi đã kết nối!");
-    Serial.print("IP: ");
-    Serial.println(WiFi.localIP());
+    ESP_LOGI(TAG, "WiFi connected!");
+    ESP_LOGI(TAG, "IP address: %s", WiFi.localIP().toString().c_str());
 }
 
 void mqttCallback(char *topic, byte *payload, unsigned int length) {
-    // Tạm thời chưa xử lý gì – sau này bạn có thể parse JSON cho OTA command
-    Serial.print("📩 MQTT message on [");
-    Serial.print(topic);
-    Serial.print("]: ");
-    for (unsigned int i = 0; i < length; i++) {
-        Serial.print((char)payload[i]);
+    ESP_LOGI(TAG, "MQTT message on topic: %s", topic);
+    char* payload_str = (char*)malloc(length + 1);
+    if (!payload_str) {
+        ESP_LOGE(TAG, "Failed to allocate memory for payload");
+        return;
     }
-    Serial.println();
+    memcpy(payload_str, payload, length);
+    payload_str[length] = '\0';
+    ESP_LOGI(TAG, "Payload: %s", payload_str);
+    free(payload_str);
 }
 
 void connectMQTT() {
@@ -55,15 +59,13 @@ void connectMQTT() {
     mqttClient.setCallback(mqttCallback);
 
     while (!mqttClient.connected()) {
-        Serial.print("🔌 Kết nối MQTT...");
+        ESP_LOGI(TAG, "Connecting to MQTT...");
         if (mqttClient.connect(MQTT_CLIENT_ID, MQTT_USER, MQTT_PASSWORD)) {
-            Serial.println("✅ MQTT đã kết nối!");
-            // Sau này nếu có topic OTA thì subscribe ở đây
-            // mqttClient.subscribe("v1/devices/me/rpc/request/+");
+            ESP_LOGI(TAG, "MQTT connected!");
+            // Không cần subscribe topic OTA nữa
         } else {
-            Serial.print("❌ Thất bại, state = ");
-            Serial.println(mqttClient.state());
-            delay(2000);
+            ESP_LOGE(TAG, "Failed, rc=%d. Retrying in 2 seconds...", mqttClient.state());
+            vTaskDelay(2000 / portTICK_PERIOD_MS);
         }
     }
 }
@@ -81,15 +83,15 @@ void setup() {
     lcd.clear();
 
     lcd.setCursor(0, 0);
-    lcd.print("Hello world!");
+    lcd.print("Secure Boot App");
     lcd.setCursor(0, 1);
-    lcd.print("OTA test ready");
+    lcd.print("System Ready");
 
     // WiFi + MQTT
     connectWiFi();
     connectMQTT();
 
-    Serial.println("🚀 System ready for OTA tests!");
+    ESP_LOGI(TAG, "System ready for Secure Boot!");
 }
 
 void loop() {
@@ -104,9 +106,9 @@ void loop() {
     unsigned long now = millis();
     if (now - lastPing > 5000) {  // 5s một lần
         lastPing = now;
-        const char *payload = "{\"status\":\"alive\",\"app\":\"ota-test\"}";
+        const char *payload = "{\"status\":\"alive\",\"app\":\"secure-boot-test\"}";
         mqttClient.publish(MQTT_TOPIC_PING, payload);
-        Serial.println(String("📡 MQTT ping: ") + payload);
+        ESP_LOGI(TAG, "MQTT ping: %s", payload);
     }
 
     // Nhấp nháy 1 ký tự cuối dòng 2 cho vui
