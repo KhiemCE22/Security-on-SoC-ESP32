@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "YOLO_BIT",
-    "project_version":    "1",
+    "project_version":    "5973ec1-dirty",
     "project_path":       "D:/Study/Cryptoloraphy/YOLO_BIT",
     "idf_path":           "C:/Users/quynh/esp/v5.1/esp-idf",
     "build_dir":          "D:/Study/Cryptoloraphy/YOLO_BIT/build",
@@ -1255,7 +1255,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "D:/Study/Cryptoloraphy/YOLO_BIT/build/esp-idf/nvs_flash/libnvs_flash.a",
-            "sources": [ "C:/Users/quynh/esp/v5.1/esp-idf/components/nvs_flash/src/nvs_api.cpp", "C:/Users/quynh/esp/v5.1/esp-idf/components/nvs_flash/src/nvs_cxx_api.cpp", "C:/Users/quynh/esp/v5.1/esp-idf/components/nvs_flash/src/nvs_item_hash_list.cpp", "C:/Users/quynh/esp/v5.1/esp-idf/components/nvs_flash/src/nvs_page.cpp", "C:/Users/quynh/esp/v5.1/esp-idf/components/nvs_flash/src/nvs_pagemanager.cpp", "C:/Users/quynh/esp/v5.1/esp-idf/components/nvs_flash/src/nvs_storage.cpp", "C:/Users/quynh/esp/v5.1/esp-idf/components/nvs_flash/src/nvs_handle_simple.cpp", "C:/Users/quynh/esp/v5.1/esp-idf/components/nvs_flash/src/nvs_handle_locked.cpp", "C:/Users/quynh/esp/v5.1/esp-idf/components/nvs_flash/src/nvs_partition.cpp", "C:/Users/quynh/esp/v5.1/esp-idf/components/nvs_flash/src/nvs_partition_lookup.cpp", "C:/Users/quynh/esp/v5.1/esp-idf/components/nvs_flash/src/nvs_partition_manager.cpp", "C:/Users/quynh/esp/v5.1/esp-idf/components/nvs_flash/src/nvs_types.cpp", "C:/Users/quynh/esp/v5.1/esp-idf/components/nvs_flash/src/nvs_platform.cpp" ],
+            "sources": [ "C:/Users/quynh/esp/v5.1/esp-idf/components/nvs_flash/src/nvs_api.cpp", "C:/Users/quynh/esp/v5.1/esp-idf/components/nvs_flash/src/nvs_cxx_api.cpp", "C:/Users/quynh/esp/v5.1/esp-idf/components/nvs_flash/src/nvs_item_hash_list.cpp", "C:/Users/quynh/esp/v5.1/esp-idf/components/nvs_flash/src/nvs_page.cpp", "C:/Users/quynh/esp/v5.1/esp-idf/components/nvs_flash/src/nvs_pagemanager.cpp", "C:/Users/quynh/esp/v5.1/esp-idf/components/nvs_flash/src/nvs_storage.cpp", "C:/Users/quynh/esp/v5.1/esp-idf/components/nvs_flash/src/nvs_handle_simple.cpp", "C:/Users/quynh/esp/v5.1/esp-idf/components/nvs_flash/src/nvs_handle_locked.cpp", "C:/Users/quynh/esp/v5.1/esp-idf/components/nvs_flash/src/nvs_partition.cpp", "C:/Users/quynh/esp/v5.1/esp-idf/components/nvs_flash/src/nvs_partition_lookup.cpp", "C:/Users/quynh/esp/v5.1/esp-idf/components/nvs_flash/src/nvs_partition_manager.cpp", "C:/Users/quynh/esp/v5.1/esp-idf/components/nvs_flash/src/nvs_types.cpp", "C:/Users/quynh/esp/v5.1/esp-idf/components/nvs_flash/src/nvs_platform.cpp", "C:/Users/quynh/esp/v5.1/esp-idf/components/nvs_flash/src/nvs_encrypted_partition.cpp" ],
             "include_dirs": [ "include" ]
         },
         "openthread": {

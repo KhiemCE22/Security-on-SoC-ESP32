@@ -1,0 +1,387 @@
+I (45) boot: ESP-IDF v5.1.6-1361-g20dd78b02e 2nd stage bootloader
+I (45) boot: compile time Nov 29 2025 00:06:41
+I (46) boot: Multicore bootloader
+D (51) bootloader_flash: non-XMC chip detected by SFDP Read (00), skip.
+D (57) bootloader_flash: mmu set block paddr=0x00000000 (was 0xffffffff)
+I (64) boot: chip revision: v1.1
+D (68) boot.esp32: magic e9
+D (71) boot.esp32: segments 04
+D (74) boot.esp32: spi_mode 02
+D (77) boot.esp32: spi_speed 00
+D (80) boot.esp32: spi_size 02
+I (83) boot.esp32: SPI Speed      : 40MHz
+I (88) boot.esp32: SPI Mode       : DIO
+I (92) boot.esp32: SPI Flash Size : 4MB
+D (97) boot: Enabling RTCWDT(9000 ms)
+I (101) boot: Enabling RNG early entropy source...
+D (106) bootloader_flash: rodata starts from paddr=0x00010000, size=0xc00, will be mapped to vaddr=0x3f400000
+V (116) bootloader_flash: after mapping, starting from paddr=0x00010000 and vaddr=0x3f400000, 0x10000 bytes are mapped
+D (127) boot: mapped partition table 0x10000 at 0x3f400000
+D (132) flash_parts: partition table verified, 4 entries
+I (138) boot: Partition Table:
+I (142) boot: ## Label            Usage          Type ST Offset   Length
+D (149) boot: load partition table entry 0x3f400000
+D (154) boot: type=1 subtype=2
+I (157) boot:  0 nvs              WiFi data        01 02 00011000 00006000
+D (165) boot: load partition table entry 0x3f400020
+D (170) boot: type=1 subtype=1
+I (173) boot:  1 phy_init         RF data          01 01 00017000 00001000
+D (180) boot: load partition table entry 0x3f400040
+D (185) boot: type=0 subtype=0
+I (188) boot:  2 factory          factory app      00 00 00020000 00100000
+I (196) boot: End of partition table
+D (200) boot: Trying partition index -1 offs 0x20000 size 0x100000
+D (206) esp_image: reading image header @ 0x20000
+D (211) bootloader_flash: mmu set block paddr=0x00020000 (was 0xffffffff)
+D (218) esp_image: image header: 0xe9 0x06 0x02 0x02 400816a4
+V (224) esp_image: loading segment header 0 at offset 0x20018
+V (230) esp_image: segment data length 0x223c8 data starts 0x20020
+V (236) esp_image: segment 0 map_segment 1 segment_data_offs 0x20020 load_addr 0x3f400020
+I (244) esp_image: segment 0: paddr=00020020 vaddr=3f400020 size=223c8h (140232) map
+D (253) esp_image: free data page_count 0x00000032
+D (257) bootloader_flash: rodata starts from paddr=0x00020020, size=0x223c8, will be mapped to vaddr=0x3f400000
+V (268) bootloader_flash: after mapping, starting from paddr=0x00020000 and vaddr=0x3f400000, 0x30000 bytes are mapped
+V (330) esp_image: loading segment header 1 at offset 0x423e8
+D (330) bootloader_flash: mmu set block paddr=0x00040000 (was 0xffffffff)
+V (331) esp_image: segment data length 0x3e04 data starts 0x423f0
+V (337) esp_image: segment 1 map_segment 0 segment_data_offs 0x423f0 load_addr 0x3ffb0000
+I (345) esp_image: segment 1: paddr=000423f0 vaddr=3ffb0000 size=03e04h ( 15876) load
+D (354) esp_image: free data page_count 0x00000032
+D (359) bootloader_flash: rodata starts from paddr=0x000423f0, size=0x3e04, will be mapped to vaddr=0x3f400000
+V (369) bootloader_flash: after mapping, starting from paddr=0x00040000 and vaddr=0x3f400000, 0x10000 bytes are mapped
+V (386) esp_image: loading segment header 2 at offset 0x461f4
+D (386) bootloader_flash: mmu set block paddr=0x00040000 (was 0xffffffff)
+V (392) esp_image: segment data length 0x9e1c data starts 0x461fc
+V (398) esp_image: segment 2 map_segment 0 segment_data_offs 0x461fc load_addr 0x40080000
+I (407) esp_image: segment 2: paddr=000461fc vaddr=40080000 size=09e1ch ( 40476) load
+D (415) esp_image: free data page_count 0x00000032
+D (420) bootloader_flash: rodata starts from paddr=0x000461fc, size=0x9e1c, will be mapped to vaddr=0x3f400000
+V (430) bootloader_flash: after mapping, starting from paddr=0x00040000 and vaddr=0x3f400000, 0x20000 bytes are mapped
+V (458) esp_image: loading segment header 3 at offset 0x50018
+D (458) bootloader_flash: mmu set block paddr=0x00050000 (was 0xffffffff)
+V (459) esp_image: segment data length 0x9af14 data starts 0x50020
+V (465) esp_image: segment 3 map_segment 1 segment_data_offs 0x50020 load_addr 0x400d0020
+I (474) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=9af14h (634644) map
+D (482) esp_image: free data page_count 0x00000032
+D (487) bootloader_flash: rodata starts from paddr=0x00050020, size=0x9af14, will be mapped to vaddr=0x3f400000
+V (497) bootloader_flash: after mapping, starting from paddr=0x00050000 and vaddr=0x3f400000, 0xa0000 bytes are mapped
+V (739) esp_image: loading segment header 4 at offset 0xeaf34
+D (739) bootloader_flash: mmu set block paddr=0x000e0000 (was 0xffffffff)
+V (740) esp_image: segment data length 0xe0f0 data starts 0xeaf3c
+V (747) esp_image: segment 4 map_segment 0 segment_data_offs 0xeaf3c load_addr 0x40089e1c
+I (755) esp_image: segment 4: paddr=000eaf3c vaddr=40089e1c size=0e0f0h ( 57584) load
+D (763) esp_image: free data page_count 0x00000032
+D (768) bootloader_flash: rodata starts from paddr=0x000eaf3c, size=0xe0f0, will be mapped to vaddr=0x3f400000
+V (778) bootloader_flash: after mapping, starting from paddr=0x000e0000 and vaddr=0x3f400000, 0x20000 bytes are mapped
+V (813) esp_image: loading segment header 5 at offset 0xf902c
+D (813) bootloader_flash: mmu set block paddr=0x000f0000 (was 0xffffffff)
+V (815) esp_image: segment data length 0x6f4c data starts 0xf9034
+V (821) esp_image: segment 5 map_segment 0 segment_data_offs 0xf9034 load_addr 0x0
+I (828) esp_image: segment 5: paddr=000f9034 vaddr=00000000 size=06f4ch ( 28492) 
+D (837) esp_image: free data page_count 0x00000032
+D (841) bootloader_flash: rodata starts from paddr=0x000f9034, size=0x6f4c, will be mapped to vaddr=0x3f400000
+V (852) bootloader_flash: after mapping, starting from paddr=0x000f0000 and vaddr=0x3f400000, 0x10000 bytes are mapped
+V (873) esp_image: image start 0x00020000 end of last section 0x000fff80
+D (873) bootloader_flash: mmu set block paddr=0x000f0000 (was 0xffffffff)
+I (876) esp_image: Verifying image signature...
+D (881) bootloader_flash: rodata starts from paddr=0x000fff90, size=0x20, will be mapped to vaddr=0x3f400000
+V (891) bootloader_flash: after mapping, starting from paddr=0x000f0000 and vaddr=0x3f400000, 0x10000 bytes are mapped
+D (902) boot: Calculated secure boot hash: c43a41ad1ea2587e5f425c5e5689e5192a65b78e19200a811cea6f54f85fd1dc
+D (912) bootloader_flash: rodata starts from paddr=0x000fffb0, size=0x44, will be mapped to vaddr=0x3f400000
+V (921) bootloader_flash: after mapping, starting from paddr=0x000f0000 and vaddr=0x3f400000, 0x10000 bytes are mapped
+D (932) secure_boot: Verifying secure boot signature
+D (1262) secure_boot: Verification result 1
+I (1274) boot: Loaded app from partition at offset 0x20000
+I (1274) secure_boot_v1: bootloader secure boot is already enabled. No need to generate digest. continuing..
+I (1279) boot: Checking flash encryption...
+D (1284) efuse: In EFUSE_BLK0__DATA0_REG is used 7 bits starting with 20 bit
+D (1291) efuse: In EFUSE_BLK0__DATA0_REG is used 1 bits starting with 2 bit
+V (1298) flash_encrypt: CRYPT_CNT 2, write protection 0
+D (1303) efuse: In EFUSE_BLK0__DATA0_REG is used 1 bits starting with 2 bit
+D (1310) efuse: In EFUSE_BLK0__DATA0_REG is used 7 bits starting with 20 bit
+D (1317) esp_image: reading image header @ 0x1000
+D (1322) bootloader_flash: mmu set block paddr=0x00000000 (was 0xffffffff)
+D (1329) esp_image: image header: 0xe9 0x04 0x02 0x02 40080688
+V (1335) esp_image: loading segment header 0 at offset 0x1018
+V (1341) esp_image: segment data length 0x4524 data starts 0x1020
+V (1347) esp_image: segment 0 map_segment 0 segment_data_offs 0x1020 load_addr 0x3fff00b8
+I (1355) esp_image: segment 0: paddr=00001020 vaddr=3fff00b8 size=04524h ( 17700) 
+D (1364) esp_image: free data page_count 0x00000032
+D (1369) bootloader_flash: rodata starts from paddr=0x00001020, size=0x4524, will be mapped to vaddr=0x3f400000
+V (1379) bootloader_flash: after mapping, starting from paddr=0x00000000 and vaddr=0x3f400000, 0x10000 bytes are mapped
+V (1393) esp_image: loading segment header 1 at offset 0x5544
+D (1395) bootloader_flash: mmu set block paddr=0x00000000 (was 0xffffffff)
+V (1402) esp_image: segment data length 0x7390 data starts 0x554c
+V (1408) esp_image: segment 1 map_segment 0 segment_data_offs 0x554c load_addr 0x40078000
+I (1417) esp_image: segment 1: paddr=0000554c vaddr=40078000 size=07390h ( 29584) 
+D (1425) esp_image: free data page_count 0x00000032
+D (1430) bootloader_flash: rodata starts from paddr=0x0000554c, size=0x7390, will be mapped to vaddr=0x3f400000
+V (1440) bootloader_flash: after mapping, starting from paddr=0x00000000 and vaddr=0x3f400000, 0x10000 bytes are mapped
+V (1457) esp_image: loading segment header 2 at offset 0xc8dc
+D (1457) bootloader_flash: mmu set block paddr=0x00000000 (was 0xffffffff)
+V (1464) esp_image: segment data length 0x4 data starts 0xc8e4
+V (1470) esp_image: segment 2 map_segment 0 segment_data_offs 0xc8e4 load_addr 0x40080400
+I (1478) esp_image: segment 2: paddr=0000c8e4 vaddr=40080400 size=00004h (     4) 
+D (1486) esp_image: free data page_count 0x00000032
+D (1491) bootloader_flash: rodata starts from paddr=0x0000c8e4, size=0x4, will be mapped to vaddr=0x3f400000
+V (1501) bootloader_flash: after mapping, starting from paddr=0x00000000 and vaddr=0x3f400000, 0x10000 bytes are mapped
+V (1512) esp_image: loading segment header 3 at offset 0xc8e8
+D (1518) bootloader_flash: mmu set block paddr=0x00000000 (was 0xffffffff)
+V (1525) esp_image: segment data length 0x10a0 data starts 0xc8f0
+V (1531) esp_image: segment 3 map_segment 0 segment_data_offs 0xc8f0 load_addr 0x40080404
+I (1539) esp_image: segment 3: paddr=0000c8f0 vaddr=40080404 size=010a0h (  4256) 
+D (1547) esp_image: free data page_count 0x00000032
+D (1552) bootloader_flash: rodata starts from paddr=0x0000c8f0, size=0x10a0, will be mapped to vaddr=0x3f400000
+V (1562) bootloader_flash: after mapping, starting from paddr=0x00000000 and vaddr=0x3f400000, 0x10000 bytes are mapped
+V (1574) esp_image: image start 0x00001000 end of last section 0x0000d990
+D (1580) bootloader_flash: mmu set block paddr=0x00000000 (was 0xffffffff)
+D (1587) flash_encrypt: bootloader is plaintext. Encrypting...
+D (2497) flash_encrypt: Encrypting secure bootloader IV & digest...
+I (2567) flash_encrypt: bootloader encrypted successfully
+D (2567) flash_parts: partition table verified, 4 entries
+D (2567) flash_encrypt: partition table is plaintext. Encrypting...
+I (2645) flash_encrypt: partition table encrypted and loaded successfully
+D (2645) esp_image: reading image header @ 0x20000
+D (2646) bootloader_flash: mmu set block paddr=0x00020000 (was 0x00000000)
+D (2653) esp_image: image header: 0xe9 0x06 0x02 0x02 400816a4
+V (2659) esp_image: loading segment header 0 at offset 0x20018
+V (2665) esp_image: segment data length 0x223c8 data starts 0x20020
+V (2671) esp_image: segment 0 map_segment 1 segment_data_offs 0x20020 load_addr 0x3f400020
+I (2679) esp_image: segment 0: paddr=00020020 vaddr=3f400020 size=223c8h (140232) map
+D (2688) esp_image: free data page_count 0x00000032
+D (2693) bootloader_flash: rodata starts from paddr=0x00020020, size=0x223c8, will be mapped to vaddr=0x3f400000
+V (2703) bootloader_flash: after mapping, starting from paddr=0x00020000 and vaddr=0x3f400000, 0x30000 bytes are mapped
+V (2765) esp_image: loading segment header 1 at offset 0x423e8
+D (2765) bootloader_flash: mmu set block paddr=0x00040000 (was 0xffffffff)
+V (2767) esp_image: segment data length 0x3e04 data starts 0x423f0
+V (2773) esp_image: segment 1 map_segment 0 segment_data_offs 0x423f0 load_addr 0x3ffb0000
+I (2781) esp_image: segment 1: paddr=000423f0 vaddr=3ffb0000 size=03e04h ( 15876) 
+D (2789) esp_image: free data page_count 0x00000032
+D (2794) bootloader_flash: rodata starts from paddr=0x000423f0, size=0x3e04, will be mapped to vaddr=0x3f400000
+V (2804) bootloader_flash: after mapping, starting from paddr=0x00040000 and vaddr=0x3f400000, 0x10000 bytes are mapped
+V (2821) esp_image: loading segment header 2 at offset 0x461f4
+D (2821) bootloader_flash: mmu set block paddr=0x00040000 (was 0xffffffff)
+V (2828) esp_image: segment data length 0x9e1c data starts 0x461fc
+V (2834) esp_image: segment 2 map_segment 0 segment_data_offs 0x461fc load_addr 0x40080000
+I (2843) esp_image: segment 2: paddr=000461fc vaddr=40080000 size=09e1ch ( 40476) 
+D (2851) esp_image: free data page_count 0x00000032
+D (2856) bootloader_flash: rodata starts from paddr=0x000461fc, size=0x9e1c, will be mapped to vaddr=0x3f400000
+V (2866) bootloader_flash: after mapping, starting from paddr=0x00040000 and vaddr=0x3f400000, 0x20000 bytes are mapped
+V (2892) esp_image: loading segment header 3 at offset 0x50018
+D (2892) bootloader_flash: mmu set block paddr=0x00050000 (was 0xffffffff)
+V (2893) esp_image: segment data length 0x9af14 data starts 0x50020
+V (2900) esp_image: segment 3 map_segment 1 segment_data_offs 0x50020 load_addr 0x400d0020
+I (2908) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=9af14h (634644) map
+D (2917) esp_image: free data page_count 0x00000032
+D (2922) bootloader_flash: rodata starts from paddr=0x00050020, size=0x9af14, will be mapped to vaddr=0x3f400000
+V (2932) bootloader_flash: after mapping, starting from paddr=0x00050000 and vaddr=0x3f400000, 0xa0000 bytes are mapped
+V (3174) esp_image: loading segment header 4 at offset 0xeaf34
+D (3174) bootloader_flash: mmu set block paddr=0x000e0000 (was 0xffffffff)
+V (3175) esp_image: segment data length 0xe0f0 data starts 0xeaf3c
+V (3182) esp_image: segment 4 map_segment 0 segment_data_offs 0xeaf3c load_addr 0x40089e1c
+I (3190) esp_image: segment 4: paddr=000eaf3c vaddr=40089e1c size=0e0f0h ( 57584) 
+D (3198) esp_image: free data page_count 0x00000032
+D (3203) bootloader_flash: rodata starts from paddr=0x000eaf3c, size=0xe0f0, will be mapped to vaddr=0x3f400000
+V (3213) bootloader_flash: after mapping, starting from paddr=0x000e0000 and vaddr=0x3f400000, 0x20000 bytes are mapped
+V (3245) esp_image: loading segment header 5 at offset 0xf902c
+D (3245) bootloader_flash: mmu set block paddr=0x000f0000 (was 0xffffffff)
+V (3247) esp_image: segment data length 0x6f4c data starts 0xf9034
+V (3253) esp_image: segment 5 map_segment 0 segment_data_offs 0xf9034 load_addr 0x0
+I (3261) esp_image: segment 5: paddr=000f9034 vaddr=00000000 size=06f4ch ( 28492) 
+D (3269) esp_image: free data page_count 0x00000032
+D (3274) bootloader_flash: rodata starts from paddr=0x000f9034, size=0x6f4c, will be mapped to vaddr=0x3f400000
+V (3284) bootloader_flash: after mapping, starting from paddr=0x000f0000 and vaddr=0x3f400000, 0x10000 bytes are mapped
+V (3305) esp_image: image start 0x00020000 end of last section 0x000fff80
+D (3305) bootloader_flash: mmu set block paddr=0x000f0000 (was 0xffffffff)
+I (3309) esp_image: Verifying image signature...
+D (3314) bootloader_flash: rodata starts from paddr=0x000fff90, size=0x20, will be mapped to vaddr=0x3f400000
+V (3324) bootloader_flash: after mapping, starting from paddr=0x000f0000 and vaddr=0x3f400000, 0x10000 bytes are mapped
+D (3335) boot: Calculated secure boot hash: c43a41ad1ea2587e5f425c5e5689e5192a65b78e19200a811cea6f54f85fd1dc
+D (3345) bootloader_flash: rodata starts from paddr=0x000fffb0, size=0x44, will be mapped to vaddr=0x3f400000
+V (3355) bootloader_flash: after mapping, starting from paddr=0x000f0000 and vaddr=0x3f400000, 0x10000 bytes are mapped
+D (3366) secure_boot: Verifying secure boot signature
+D (3695) secure_boot: Verification result 1
+I (3696) flash_encrypt: Encrypting partition 2 at offset 0x20000 (length 0x100000)...
+I (21008) flash_encrypt: Done encrypting
+D (21008) flash_encrypt: All flash regions checked for encryption pass
+D (21008) efuse: In EFUSE_BLK0__DATA0_REG is used 1 bits starting with 2 bit
+D (21015) efuse: In EFUSE_BLK0__DATA0_REG is used 7 bits starting with 20 bit
+D (21022) flash_encrypt: CRYPT_CNT 2 -> 1
+D (21026) efuse: In EFUSE_BLK0__DATA0_REG is used 7 bits starting with 20 bit
+I (21034) efuse: BURN BLOCK0
+I (21048) efuse: BURN BLOCK0 - OK (all write block bits are set)
+I (21048) flash_encrypt: Flash encryption completed
+I (21052) boot: Checking secure boot...
+I (21056) secure_boot_v1: bootloader secure boot is already enabled, continuing..
+I (21064) boot: Resetting with flash encryption enabled...
+ets Jun  8 2016 00:22:57
+
+rst:0x3 (SW_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff00b8,len:17700
+load:0x40078000,len:29584
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:4256
+entry 0x40080688
+I (65) boot: ESP-IDF v5.1.6-1361-g20dd78b02e 2nd stage bootloader
+I (65) boot: compile time Nov 29 2025 00:06:41
+I (67) boot: Multicore bootloader
+D (71) bootloader_flash: non-XMC chip detected by SFDP Read (00), skip.
+D (78) bootloader_flash: mmu set block paddr=0x00000000 (was 0xffffffff)
+I (85) boot: chip revision: v1.1
+D (88) boot.esp32: magic e9
+D (91) boot.esp32: segments 04
+D (94) boot.esp32: spi_mode 02
+D (98) boot.esp32: spi_speed 00
+D (101) boot.esp32: spi_size 02
+I (104) boot.esp32: SPI Speed      : 40MHz
+I (109) boot.esp32: SPI Mode       : DIO
+I (113) boot.esp32: SPI Flash Size : 4MB
+D (118) boot: Enabling RTCWDT(9000 ms)
+I (122) boot: Enabling RNG early entropy source...
+D (127) bootloader_flash: rodata starts from paddr=0x00010000, size=0xc00, will be mapped to vaddr=0x3f400000
+V (137) bootloader_flash: after mapping, starting from paddr=0x00010000 and vaddr=0x3f400000, 0x10000 bytes are mapped
+D (148) boot: mapped partition table 0x10000 at 0x3f400000
+D (154) flash_parts: partition table verified, 4 entries
+I (159) boot: Partition Table:
+I (163) boot: ## Label            Usage          Type ST Offset   Length
+D (170) boot: load partition table entry 0x3f400000
+D (175) boot: type=1 subtype=2
+I (178) boot:  0 nvs              WiFi data        01 02 00011000 00006000
+D (186) boot: load partition table entry 0x3f400020
+D (191) boot: type=1 subtype=1
+I (194) boot:  1 phy_init         RF data          01 01 00017000 00001000
+D (201) boot: load partition table entry 0x3f400040
+D (206) boot: type=0 subtype=0
+I (209) boot:  2 factory          factory app      00 00 00020000 00100000
+I (217) boot: End of partition table
+D (221) boot: Trying partition index -1 offs 0x20000 size 0x100000
+D (227) esp_image: reading image header @ 0x20000
+D (232) bootloader_flash: mmu set block paddr=0x00020000 (was 0xffffffff)
+D (239) esp_image: image header: 0xe9 0x06 0x02 0x02 400816a4
+V (245) esp_image: loading segment header 0 at offset 0x20018
+V (251) esp_image: segment data length 0x223c8 data starts 0x20020
+V (257) esp_image: segment 0 map_segment 1 segment_data_offs 0x20020 load_addr 0x3f400020
+I (265) esp_image: segment 0: paddr=00020020 vaddr=3f400020 size=223c8h (140232) map
+D (274) esp_image: free data page_count 0x00000032
+D (278) bootloader_flash: rodata starts from paddr=0x00020020, size=0x223c8, will be mapped to vaddr=0x3f400000
+V (289) bootloader_flash: after mapping, starting from paddr=0x00020000 and vaddr=0x3f400000, 0x30000 bytes are mapped
+V (352) esp_image: loading segment header 1 at offset 0x423e8
+D (352) bootloader_flash: mmu set block paddr=0x00040000 (was 0xffffffff)
+V (354) esp_image: segment data length 0x3e04 data starts 0x423f0
+V (360) esp_image: segment 1 map_segment 0 segment_data_offs 0x423f0 load_addr 0x3ffb0000
+I (368) esp_image: segment 1: paddr=000423f0 vaddr=3ffb0000 size=03e04h ( 15876) load
+D (377) esp_image: free data page_count 0x00000032
+D (382) bootloader_flash: rodata starts from paddr=0x000423f0, size=0x3e04, will be mapped to vaddr=0x3f400000
+V (392) bootloader_flash: after mapping, starting from paddr=0x00040000 and vaddr=0x3f400000, 0x10000 bytes are mapped
+V (409) esp_image: loading segment header 2 at offset 0x461f4
+D (409) bootloader_flash: mmu set block paddr=0x00040000 (was 0xffffffff)
+V (415) esp_image: segment data length 0x9e1c data starts 0x461fc
+V (421) esp_image: segment 2 map_segment 0 segment_data_offs 0x461fc load_addr 0x40080000
+I (429) esp_image: segment 2: paddr=000461fc vaddr=40080000 size=09e1ch ( 40476) load
+D (438) esp_image: free data page_count 0x00000032
+D (443) bootloader_flash: rodata starts from paddr=0x000461fc, size=0x9e1c, will be mapped to vaddr=0x3f400000
+V (453) bootloader_flash: after mapping, starting from paddr=0x00040000 and vaddr=0x3f400000, 0x20000 bytes are mapped
+V (481) esp_image: loading segment header 3 at offset 0x50018
+D (481) bootloader_flash: mmu set block paddr=0x00050000 (was 0xffffffff)
+V (483) esp_image: segment data length 0x9af14 data starts 0x50020
+V (489) esp_image: segment 3 map_segment 1 segment_data_offs 0x50020 load_addr 0x400d0020
+I (497) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=9af14h (634644) map
+D (505) esp_image: free data page_count 0x00000032
+D (510) bootloader_flash: rodata starts from paddr=0x00050020, size=0x9af14, will be mapped to vaddr=0x3f400000
+V (520) bootloader_flash: after mapping, starting from paddr=0x00050000 and vaddr=0x3f400000, 0xa0000 bytes are mapped
+V (770) esp_image: loading segment header 4 at offset 0xeaf34
+D (770) bootloader_flash: mmu set block paddr=0x000e0000 (was 0xffffffff)
+V (771) esp_image: segment data length 0xe0f0 data starts 0xeaf3c
+V (778) esp_image: segment 4 map_segment 0 segment_data_offs 0xeaf3c load_addr 0x40089e1c
+I (786) esp_image: segment 4: paddr=000eaf3c vaddr=40089e1c size=0e0f0h ( 57584) load
+D (794) esp_image: free data page_count 0x00000032
+D (799) bootloader_flash: rodata starts from paddr=0x000eaf3c, size=0xe0f0, will be mapped to vaddr=0x3f400000
+V (809) bootloader_flash: after mapping, starting from paddr=0x000e0000 and vaddr=0x3f400000, 0x20000 bytes are mapped
+V (845) esp_image: loading segment header 5 at offset 0xf902c
+D (845) bootloader_flash: mmu set block paddr=0x000f0000 (was 0xffffffff)
+V (846) esp_image: segment data length 0x6f4c data starts 0xf9034
+V (852) esp_image: segment 5 map_segment 0 segment_data_offs 0xf9034 load_addr 0x0
+I (860) esp_image: segment 5: paddr=000f9034 vaddr=00000000 size=06f4ch ( 28492) 
+D (868) esp_image: free data page_count 0x00000032
+D (873) bootloader_flash: rodata starts from paddr=0x000f9034, size=0x6f4c, will be mapped to vaddr=0x3f400000
+V (883) bootloader_flash: after mapping, starting from paddr=0x000f0000 and vaddr=0x3f400000, 0x10000 bytes are mapped
+V (905) esp_image: image start 0x00020000 end of last section 0x000fff80
+D (905) bootloader_flash: mmu set block paddr=0x000f0000 (was 0xffffffff)
+I (908) esp_image: Verifying image signature...
+D (913) bootloader_flash: rodata starts from paddr=0x000fff90, size=0x20, will be mapped to vaddr=0x3f400000
+V (923) bootloader_flash: after mapping, starting from paddr=0x000f0000 and vaddr=0x3f400000, 0x10000 bytes are mapped
+D (934) boot: Calculated secure boot hash: c43a41ad1ea2587e5f425c5e5689e5192a65b78e19200a811cea6f54f85fd1dc
+D (943) bootloader_flash: rodata starts from paddr=0x000fffb0, size=0x44, will be mapped to vaddr=0x3f400000
+V (953) bootloader_flash: after mapping, starting from paddr=0x000f0000 and vaddr=0x3f400000, 0x10000 bytes are mapped
+D (964) secure_boot: Verifying secure boot signature
+D (1294) secure_boot: Verification result 1
+I (1305) boot: Loaded app from partition at offset 0x20000
+I (1305) secure_boot_v1: bootloader secure boot is already enabled. No need to generate digest. continuing..
+I (1311) boot: Checking flash encryption...
+D (1316) efuse: In EFUSE_BLK0__DATA0_REG is used 7 bits starting with 20 bit
+D (1323) efuse: In EFUSE_BLK0__DATA0_REG is used 1 bits starting with 2 bit
+V (1330) flash_encrypt: CRYPT_CNT 3, write protection 0
+I (1335) flash_encrypt: flash encryption is enabled (2 plaintext flashes left)
+I (1343) boot: Checking secure boot...
+I (1347) secure_boot_v1: bootloader secure boot is already enabled, continuing..
+I (1355) boot: Disabling RNG early entropy source...
+D (1361) boot: Mapping segment 0 as DROM
+D (1365) boot: Mapping segment 3 as IROM
+D (1369) boot: calling set_cache_and_start_app
+D (1374) boot: configure drom and irom and start
+V (1378) boot: rodata starts from paddr=0x00020020, vaddr=0x3f400020, size=0x223c8
+V (1386) boot: rc=0
+V (1388) boot: rc=0
+V (1390) boot: after mapping rodata, starting from paddr=0x00020000 and vaddr=0x3f400000, 0x30000 bytes are mapped
+V (1401) boot: text starts from paddr=0x00050020, vaddr=0x400d0020, size=0x9af14
+V (1408) boot: rc=0
+V (1410) boot: rc=0
+V (1412) boot: after mapping text, starting from paddr=0x00050000 and vaddr=0x400d0000, 0xa0000 bytes are mapped
+D (1423) boot: start: 0x400816a4
+I (1437) cpu_start: Multicore app
+I (1438) cpu_start: Pro cpu up.
+I (1438) cpu_start: Starting app cpu, entry point is 0x400814dc
+I (0) cpu_start: App cpu up.
+I (1456) cpu_start: Pro cpu start user code
+I (1456) cpu_start: cpu freq: 160000000 Hz
+I (1456) cpu_start: Application information:
+I (1461) cpu_start: Project name:     YOLO_BIT
+I (1466) cpu_start: App version:      5973ec1-dirty
+I (1471) cpu_start: Compile time:     Nov 29 2025 00:06:19
+I (1478) cpu_start: ELF file SHA256:  4731858a232dd700...
+I (1484) cpu_start: ESP-IDF:          v5.1.6-1361-g20dd78b02e
+I (1490) cpu_start: Min chip rev:     v0.0
+I (1495) cpu_start: Max chip rev:     v3.99 
+I (1500) cpu_start: Chip rev:         v1.1
+I (1505) heap_init: Initializing. RAM available for dynamic allocation:
+I (1512) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM
+I (1518) heap_init: At 3FFB8B48 len 000274B8 (157 KiB): DRAM
+I (1524) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+I (1531) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (1537) heap_init: At 40097F0C len 000080F4 (32 KiB): IRAM
+I (1545) spi_flash: detected chip: generic
+I (1548) spi_flash: flash io: dio
+W (1553) flash_encrypt: Flash encryption mode is DEVELOPMENT (not secure)
+I (1562) app_start: Starting scheduler on CPU0
+I (1565) app_start: Starting scheduler on CPU1
+I (1565) main_task: Started on CPU0
+I (1575) main_task: Calling app_main()
+E (1579) nvs: CONFIG_NVS_ENCRYPTION is enabled, but no partition with subtype nvs_keys found in the partition table.
+[    46][E][esp32-hal-misc.c:300] initArduino(): Failed to initialize NVS! Error: 4294967295
+I (2720) SECURE_APP: Connecting to WiFi...
+W (2723) wifi:wifi osi_nvs_open fail ret=4353
+
+W (2724) wifi_init: Failed to unregister Rx callbacks
+E (2725) wifi_init: Failed to deinit Wi-Fi driver (0x3001)
+E (2730) wifi_init: Failed to deinit Wi-Fi (0x3001)
+[  1192][E][WiFiGeneric.cpp:248] wifiLowLevelInit(): esp_wifi_init 4353
+[  1210][E][STA.cpp:298] begin(): STA enable failed!
+I (3758) SECURE_APP: .
+I (4758) SECURE_APP: .
+I (5758) SECURE_APP: .
+I (6758) SECURE_APP: .
+I (7758) SECURE_APP: .

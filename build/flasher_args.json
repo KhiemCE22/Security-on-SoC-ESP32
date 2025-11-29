@@ -11,8 +11,8 @@
         "0x20000" : "YOLO_BIT.bin",
         "0x10000" : "partition_table/partition-table.bin"
     },
-    "app" : { "offset" : "0x20000", "file" : "YOLO_BIT.bin", "encrypted" : "false" },
-    "partition-table" : { "offset" : "0x10000", "file" : "partition_table/partition-table.bin", "encrypted" : "false" },
+    "app" : { "offset" : "0x20000", "file" : "YOLO_BIT.bin", "encrypted" : "true" },
+    "partition-table" : { "offset" : "0x10000", "file" : "partition_table/partition-table.bin", "encrypted" : "true" },
     "extra_esptool_args" : {
         "after"  : "no_reset",
         "before" : "default_reset",
