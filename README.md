@@ -170,4 +170,8 @@ Dựa trên báo cáo thực nghiệm, hệ thống đã ngăn chặn thành cô
 
 ---
 
+# 10. Video demo
+- __Secure Boot__: [Link demo secure boot](https://drive.google.com/file/d/1wVEZvIwGUfW9iSCX1eFsD-p6DHeIZLBD/view?usp=drive_link)
+- __Flash Encryption__: [Link demo mã hóa bộ nhớ Flash](https://drive.google.com/file/d/1cHdHxLPkMgWmO28ehdTq-I1feDma0bIt/view?usp=drive_link)
+
 *Thực hiện bởi: Nguyễn Duy Khiêm + Nguyễn Văn Huynh + Nguyễn Đăng Tuấn Tài  - Mật mã và An ninh mạng (HCMUT).*
